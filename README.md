@@ -1,0 +1,1 @@
+# copilot-enter-click-extension
