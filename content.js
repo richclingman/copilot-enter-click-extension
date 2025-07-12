@@ -6,7 +6,10 @@ document.addEventListener("keydown", function (e) {
         !e.altKey &&
         !e.metaKey;
 
-    if (isPlainEnter) {
+    const isComposerFocused =
+        document.activeElement?.getAttribute("data-testid") === "composer-input";
+
+    if (isPlainEnter && isComposerFocused) {
         const btn = document.querySelector('[data-testid="submit-button"]');
         if (btn) btn.click();
     }
