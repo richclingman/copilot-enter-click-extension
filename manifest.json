@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Copilot Submit with Enter",
+  "version": "1.0",
+  "description": "Triggers the submit button on Copilot Pages when Enter is pressed.",
+  "permissions": ["scripting"],
+  "host_permissions": [
+    "https://copilot.microsoft.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://copilot.microsoft.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  }
+}
